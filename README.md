@@ -1,6 +1,6 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# PROJECT DETAILS
+This project is apart of a Udemy learning course to learn React. 
+This is a basic Expense tracking app that demonstrates using components, states, hooks to add and filter various expesnes.
 
 ## Available Scripts
 
