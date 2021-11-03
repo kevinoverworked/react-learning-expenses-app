@@ -8,16 +8,16 @@ const Expenses = (props) => {
     const [enteredYear, setFilteredYear] = useState("2021");
 
     const saveExpenseYearHandler = (enteredYear) => {
-        console.log("in Expenses.js");
-        console.log(enteredYear);
         setFilteredYear(enteredYear);
     };
+
+    const filteredExpenses = props.data.filter(item => item.date.getFullYear().toString() === enteredYear);
 
     return (
         <div>
             <Card className="expenses">
             <ExpensesFilter selected={enteredYear} onSaveYear={saveExpenseYearHandler} />
-                {props.data.map((expenses) => (
+                {filteredExpenses.map((expenses) => (
                     <ExpenseItem
                         key={expenses.id}
                         title={expenses.title}
